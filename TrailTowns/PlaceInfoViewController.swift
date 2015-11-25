@@ -12,7 +12,6 @@ import Parse
 
 class PlaceInfoViewController: UIViewController, CLLocationManagerDelegate  {
     
-    let bgColor = darkGray
     var placeId:String?
     var placeName:String?
     var placeLat:Double?
@@ -25,7 +24,7 @@ class PlaceInfoViewController: UIViewController, CLLocationManagerDelegate  {
     var availableServices = [String]()
     
     var manager: CLLocationManager!
-    let mapDelta = 0.02
+    let mapDelta = 0.015
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var serviceImages: [UIImageView]!
@@ -40,17 +39,17 @@ class PlaceInfoViewController: UIViewController, CLLocationManagerDelegate  {
         
         title = ""
     
-        view.backgroundColor = bgColor
-        descLabel.backgroundColor = bgColor
+        view.backgroundColor = darkGray
+        descLabel.backgroundColor = darkGray
         
-        addressButton.backgroundColor = midGreen2
+        addressButton.backgroundColor = lightGreen
         phoneButton.backgroundColor = midGreen
         urlButton.backgroundColor = darkGreen
         
         
         
         for image in serviceImages {
-            image.backgroundColor = bgColor
+            image.backgroundColor = darkGray
         }
         mapView.mapType = MKMapType.Standard
         mapView.hidden = true

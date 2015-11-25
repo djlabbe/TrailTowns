@@ -21,11 +21,15 @@ class TownTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = darkGray
+        backgroundColor = white
+        townNameLabel.textColor = darkGray
+        townOffsetLabel.textColor = darkGray
+        milesTravelledLabel.textColor = darkGray
+        townAccessLabel.textColor = darkGray
         
     
-        self.townImage.layer.cornerRadius = 37.5
-        self.townImage.clipsToBounds = true
+        townImage.layer.cornerRadius = 37.5
+        townImage.clipsToBounds = true
         
         
         //self.townImage.layer.borderWidth = 1.0

@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF099BE41C05410800ECDD0B /* LodgingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF099BE31C05410800ECDD0B /* LodgingAnnotation.swift */; };
+		CF099BE61C05483F00ECDD0B /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF099BE51C05483F00ECDD0B /* RestaurantAnnotation.swift */; };
+		CF099BE81C05489300ECDD0B /* PostAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF099BE71C05489300ECDD0B /* PostAnnotation.swift */; };
 		CF3005071BFDC4940009EA57 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = CF3005061BFDC4930009EA57 /* Icons */; };
+		CF3B2AF11C05668A00A0560A /* camping.png in Resources */ = {isa = PBXBuildFile; fileRef = CF3B2AF01C05668A00A0560A /* camping.png */; };
 		CF415CC91BFC3C6800C29017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF415CC81BFC3C6800C29017 /* Main.storyboard */; };
 		CF7282FA1BFA83440061E721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7282F91BFA83440061E721 /* AppDelegate.swift */; };
 		CF7283041BFA83440061E721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7283031BFA83440061E721 /* Assets.xcassets */; };
@@ -37,11 +41,31 @@
 		CFAE63C51C0102260001DDA0 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE63C41C0102260001DDA0 /* ServiceTableViewCell.swift */; };
 		CFAE63CB1C0111E50001DDA0 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE63CA1C0111E50001DDA0 /* PlacesTableViewCell.swift */; };
 		CFAE63CE1C01121D0001DDA0 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAE63CD1C01121C0001DDA0 /* PlaceCell.xib */; };
+		CFD2E57E1C055F27002A598E /* laundry.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E5741C055F27002A598E /* laundry.png */; };
+		CFD2E5801C055F27002A598E /* medical.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E5761C055F27002A598E /* medical.png */; };
+		CFD2E5811C055F27002A598E /* outfitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E5771C055F27002A598E /* outfitter.png */; };
+		CFD2E5821C055F27002A598E /* resupplyS.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E5781C055F27002A598E /* resupplyS.png */; };
+		CFD2E5831C055F27002A598E /* transportation.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E5791C055F27002A598E /* transportation.png */; };
+		CFD2E5841C055F27002A598E /* post.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E57A1C055F27002A598E /* post.png */; };
+		CFD2E5851C055F27002A598E /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E57B1C055F27002A598E /* restaurant.png */; };
+		CFD2E5861C055F27002A598E /* resupplyL.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E57C1C055F27002A598E /* resupplyL.png */; };
+		CFD2E5871C055F27002A598E /* lodging.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD2E57D1C055F27002A598E /* lodging.png */; };
+		CFD2E58A1C0562B9002A598E /* CampingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E5891C0562B9002A598E /* CampingAnnotation.swift */; };
+		CFD2E58C1C0562DE002A598E /* ResupplySAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E58B1C0562DE002A598E /* ResupplySAnnotation.swift */; };
+		CFD2E58E1C0562FB002A598E /* ResupplyLAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E58D1C0562FB002A598E /* ResupplyLAnnotation.swift */; };
+		CFD2E5901C05631C002A598E /* OutfitterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E58F1C05631C002A598E /* OutfitterAnnotation.swift */; };
+		CFD2E5921C056337002A598E /* MedicalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E5911C056337002A598E /* MedicalAnnotation.swift */; };
+		CFD2E5941C056357002A598E /* TransortationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E5931C056357002A598E /* TransortationAnnotation.swift */; };
+		CFD2E5961C056371002A598E /* LaundryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2E5951C056371002A598E /* LaundryAnnotation.swift */; };
 		CFDBF8CC1C0182FE006D6296 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBF8CB1C0182FE006D6296 /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF099BE31C05410800ECDD0B /* LodgingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LodgingAnnotation.swift; sourceTree = "<group>"; };
+		CF099BE51C05483F00ECDD0B /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
+		CF099BE71C05489300ECDD0B /* PostAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAnnotation.swift; sourceTree = "<group>"; };
 		CF3005061BFDC4930009EA57 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = ../Icons; sourceTree = "<group>"; };
+		CF3B2AF01C05668A00A0560A /* camping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camping.png; sourceTree = "<group>"; };
 		CF415CC81BFC3C6800C29017 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CF7282F61BFA83440061E721 /* TrailTowns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailTowns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7282F91BFA83440061E721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +97,22 @@
 		CFAE63C41C0102260001DDA0 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		CFAE63CA1C0111E50001DDA0 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		CFAE63CD1C01121C0001DDA0 /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		CFD2E5741C055F27002A598E /* laundry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laundry.png; sourceTree = "<group>"; };
+		CFD2E5761C055F27002A598E /* medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical.png; sourceTree = "<group>"; };
+		CFD2E5771C055F27002A598E /* outfitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outfitter.png; sourceTree = "<group>"; };
+		CFD2E5781C055F27002A598E /* resupplyS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resupplyS.png; sourceTree = "<group>"; };
+		CFD2E5791C055F27002A598E /* transportation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transportation.png; sourceTree = "<group>"; };
+		CFD2E57A1C055F27002A598E /* post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post.png; sourceTree = "<group>"; };
+		CFD2E57B1C055F27002A598E /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
+		CFD2E57C1C055F27002A598E /* resupplyL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resupplyL.png; sourceTree = "<group>"; };
+		CFD2E57D1C055F27002A598E /* lodging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lodging.png; sourceTree = "<group>"; };
+		CFD2E5891C0562B9002A598E /* CampingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampingAnnotation.swift; sourceTree = "<group>"; };
+		CFD2E58B1C0562DE002A598E /* ResupplySAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResupplySAnnotation.swift; sourceTree = "<group>"; };
+		CFD2E58D1C0562FB002A598E /* ResupplyLAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResupplyLAnnotation.swift; sourceTree = "<group>"; };
+		CFD2E58F1C05631C002A598E /* OutfitterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitterAnnotation.swift; sourceTree = "<group>"; };
+		CFD2E5911C056337002A598E /* MedicalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalAnnotation.swift; sourceTree = "<group>"; };
+		CFD2E5931C056357002A598E /* TransortationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransortationAnnotation.swift; sourceTree = "<group>"; };
+		CFD2E5951C056371002A598E /* LaundryAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaundryAnnotation.swift; sourceTree = "<group>"; };
 		CFDBF8CB1C0182FE006D6296 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +227,18 @@
 		CFAE63C91C0106FD0001DDA0 /* ServicesMap */ = {
 			isa = PBXGroup;
 			children = (
+				CFD2E5881C055F2E002A598E /* MapIcons */,
 				CF8FC6431BFC3324003364EE /* ServicesMapViewController.swift */,
+				CFD2E5951C056371002A598E /* LaundryAnnotation.swift */,
+				CFD2E5931C056357002A598E /* TransortationAnnotation.swift */,
+				CFD2E5911C056337002A598E /* MedicalAnnotation.swift */,
+				CFD2E58F1C05631C002A598E /* OutfitterAnnotation.swift */,
+				CFD2E58D1C0562FB002A598E /* ResupplyLAnnotation.swift */,
+				CFD2E58B1C0562DE002A598E /* ResupplySAnnotation.swift */,
+				CFD2E5891C0562B9002A598E /* CampingAnnotation.swift */,
+				CF099BE31C05410800ECDD0B /* LodgingAnnotation.swift */,
+				CF099BE51C05483F00ECDD0B /* RestaurantAnnotation.swift */,
+				CF099BE71C05489300ECDD0B /* PostAnnotation.swift */,
 			);
 			name = ServicesMap;
 			sourceTree = "<group>";
@@ -208,6 +259,24 @@
 				CF9FA24F1BFEDCC20020C098 /* PlaceMapViewController.swift */,
 			);
 			name = PlacesMap;
+			sourceTree = "<group>";
+		};
+		CFD2E5881C055F2E002A598E /* MapIcons */ = {
+			isa = PBXGroup;
+			children = (
+				CFD2E5741C055F27002A598E /* laundry.png */,
+				CFD2E5761C055F27002A598E /* medical.png */,
+				CFD2E5771C055F27002A598E /* outfitter.png */,
+				CFD2E5781C055F27002A598E /* resupplyS.png */,
+				CFD2E5791C055F27002A598E /* transportation.png */,
+				CFD2E57A1C055F27002A598E /* post.png */,
+				CF3B2AF01C05668A00A0560A /* camping.png */,
+				CFD2E57B1C055F27002A598E /* restaurant.png */,
+				CFD2E57C1C055F27002A598E /* resupplyL.png */,
+				CFD2E57D1C055F27002A598E /* lodging.png */,
+			);
+			name = MapIcons;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,13 +338,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD2E5861C055F27002A598E /* resupplyL.png in Resources */,
 				CF415CC91BFC3C6800C29017 /* Main.storyboard in Resources */,
 				CF3005071BFDC4940009EA57 /* Icons in Resources */,
 				CF8654D01BFF94CA002C46E2 /* TownCell.xib in Resources */,
+				CFD2E5841C055F27002A598E /* post.png in Resources */,
+				CFD2E5801C055F27002A598E /* medical.png in Resources */,
+				CFD2E5871C055F27002A598E /* lodging.png in Resources */,
 				CF7283071BFA83440061E721 /* LaunchScreen.storyboard in Resources */,
+				CF3B2AF11C05668A00A0560A /* camping.png in Resources */,
 				CFAE63CE1C01121D0001DDA0 /* PlaceCell.xib in Resources */,
+				CFD2E57E1C055F27002A598E /* laundry.png in Resources */,
+				CFD2E5831C055F27002A598E /* transportation.png in Resources */,
+				CFD2E5851C055F27002A598E /* restaurant.png in Resources */,
 				CF7283041BFA83440061E721 /* Assets.xcassets in Resources */,
+				CFD2E5811C055F27002A598E /* outfitter.png in Resources */,
 				CFAE63C31C0101A90001DDA0 /* ServiceCell.xib in Resources */,
+				CFD2E5821C055F27002A598E /* resupplyS.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,18 +365,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD2E5961C056371002A598E /* LaundryAnnotation.swift in Sources */,
+				CFD2E5901C05631C002A598E /* OutfitterAnnotation.swift in Sources */,
 				CF7282FA1BFA83440061E721 /* AppDelegate.swift in Sources */,
 				CF9FA2501BFEDCC20020C098 /* PlaceMapViewController.swift in Sources */,
 				CF7283521BFAB0A60061E721 /* TownsMapViewController.swift in Sources */,
 				CFDBF8CC1C0182FE006D6296 /* State.swift in Sources */,
+				CF099BE81C05489300ECDD0B /* PostAnnotation.swift in Sources */,
+				CF099BE61C05483F00ECDD0B /* RestaurantAnnotation.swift in Sources */,
+				CFD2E58C1C0562DE002A598E /* ResupplySAnnotation.swift in Sources */,
 				CF9092711BFE2E880018C0F4 /* TownsTableViewController.swift in Sources */,
 				CF7283171BFA89220061E721 /* ServicesTableViewController.swift in Sources */,
+				CFD2E58E1C0562FB002A598E /* ResupplyLAnnotation.swift in Sources */,
 				CFAE63CB1C0111E50001DDA0 /* PlacesTableViewCell.swift in Sources */,
+				CF099BE41C05410800ECDD0B /* LodgingAnnotation.swift in Sources */,
 				CFAE63C51C0102260001DDA0 /* ServiceTableViewCell.swift in Sources */,
 				CF7283191BFA8B210061E721 /* PlacesTableViewController.swift in Sources */,
+				CFD2E58A1C0562B9002A598E /* CampingAnnotation.swift in Sources */,
+				CFD2E5921C056337002A598E /* MedicalAnnotation.swift in Sources */,
 				CF8FC6461BFC3447003364EE /* PlaceInfoViewController.swift in Sources */,
 				CF8FC6441BFC3324003364EE /* ServicesMapViewController.swift in Sources */,
 				CFAE63C11C0101140001DDA0 /* TownTableViewCell.swift in Sources */,
+				CFD2E5941C056357002A598E /* TransortationAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

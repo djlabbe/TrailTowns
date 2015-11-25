@@ -262,7 +262,7 @@
                                     <outlet property="delegate" destination="pZF-DH-nnf" id="ead-fi-w3J"/>
                                 </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-OD-s9i">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-OD-s9i">
                                 <rect key="frame" x="0.0" y="72" width="600" height="29"/>
                                 <animations/>
                                 <constraints>
@@ -280,7 +280,7 @@
                                     <constraint firstAttribute="height" constant="30" id="EvP-Lg-MwG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="URL">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -295,14 +295,14 @@
                                     <constraint firstAttribute="height" constant="30" id="m1a-So-fiA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Phone">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="phonePressed:" destination="pZF-DH-nnf" eventType="touchUpInside" id="dIa-qm-J0Y"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LTu-mf-cOw">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LTu-mf-cOw">
                                 <rect key="frame" x="183" y="109" width="235" height="25"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-mD-0m1">
@@ -318,7 +318,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.027203725979999999" green="0.10794339009999999" blue="0.0078131800350000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="P7a-hv-BEU"/>
+                                            <constraint firstAttribute="width" constant="25" id="sce-xL-I6C"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-EU-Xyq">
@@ -372,7 +372,15 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="NIt-EU-Xyq" secondAttribute="top" id="6Sy-PZ-yrR"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="LTu-mf-cOw" secondAttribute="top" id="DkR-0q-WG3"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="yKC-z5-fa3" secondAttribute="top" id="Ert-V9-T4u"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="ZVG-0T-RcL" secondAttribute="top" id="R5s-pj-9Tq"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="vBs-cE-BYT" secondAttribute="top" id="VHp-GV-8Cf"/>
                                     <constraint firstAttribute="height" constant="25" id="Wug-Tg-r8Z"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="kxo-bN-Vjh" secondAttribute="top" id="YcJ-FI-6Ex"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="a5Z-Jh-hii" secondAttribute="top" id="gBA-BD-Adw"/>
+                                    <constraint firstItem="YRX-eE-MbS" firstAttribute="top" secondItem="ZHs-mD-0m1" secondAttribute="top" id="vJ0-mJ-ceS"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oid-i2-hQR">
@@ -382,14 +390,14 @@
                                     <constraint firstAttribute="height" constant="30" id="Ej7-qf-22W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Address">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addressPressed:" destination="pZF-DH-nnf" eventType="touchUpInside" id="e19-bK-iXA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGG-sL-0Kh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGG-sL-0Kh">
                                 <rect key="frame" x="20" y="142" width="560" height="56"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.027203725979999999" green="0.10794339009999999" blue="0.0078131800350000006" alpha="1" colorSpace="calibratedRGB"/>

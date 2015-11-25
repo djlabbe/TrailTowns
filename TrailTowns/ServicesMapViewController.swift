@@ -6,6 +6,8 @@
 //  Copyright © 2015 Douglas Labbe. All rights reserved.
 //
 
+// Map icons used under creative commons lisence courtesy of https://mapicons.mapsmarker.com/
+
 import UIKit
 import MapKit
 import Parse
@@ -17,7 +19,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
     var townLong:String?
     var placeId:String?
     var places = [PFObject]()
-    let mapDelta:CLLocationDegrees = 0.12
+    let mapDelta:CLLocationDegrees = 0.04
     
     @IBOutlet weak var map: MKMapView!
     
@@ -32,13 +34,57 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
         for place in places {
             
             if let name = place["name"] as? String {
-                if let lat = place["lat"] as? String{
+                if let lat = place["lat"] as? String {
                     if let long = place["long"] as? String {
                         let coordinate = CLLocationCoordinate2DMake((lat as NSString).doubleValue, (long as NSString).doubleValue)
-                        let annotation = MKPointAnnotation()
-                        annotation.coordinate = coordinate
-                        annotation.title = name
-                        self.map.addAnnotation(annotation)
+                        let primaryFunc = place["primaryFunc"] as! String
+                        switch(primaryFunc) {
+                        case "Lodging":
+                            let annotation = LodgingAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Camping":
+                            let annotation = CampingAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Food":
+                            let annotation = RestaurantAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "ResupplyS":
+                            let annotation = ResupplySAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "ResupplyL":
+                            let annotation = ResupplyLAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Outfitter":
+                            let annotation = OutfitterAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Post":
+                            let annotation = PostAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Medical":
+                            let annotation = MedicalAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Transportation":
+                            let annotation = TransportationAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        case "Laundry":
+                            let annotation = LaundryAnnotation(coordinate: coordinate, title:name, subtitle:"")
+                            self.map.addAnnotation(annotation)
+                            break
+                        default:
+                            let annotation = MKPointAnnotation()
+                            annotation.coordinate = coordinate
+                            annotation.title = name
+                            self.map.addAnnotation(annotation)
+                        }
                     }
                 }
             }
@@ -47,27 +93,197 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
     
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("AnnotationView Id")
+        if annotation is MKUserLocation { return nil }
         
-        if annotation is MKUserLocation {
-            return nil
-        }
+        if annotation is LodgingAnnotation {
             
-        else {
+            let reuseId = "Lodging"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
             
-            if view == nil{
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView Id")
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                 view!.canShowCallout = true
-                view!.image = UIImage(named: "Icons/Food.png")
             }
-            
             else {
                 view!.annotation = annotation
             }
             
-            view?.leftCalloutAccessoryView = nil
-            view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"lodging.png")
             
+            return view
+        
+        } else if annotation is CampingAnnotation {
+            let reuseId = "Camping"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"camping.png")
+            
+            return view
+            
+        } else if annotation is RestaurantAnnotation {
+            let reuseId = "Restaurant"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"restaurant.png")
+            
+            return view
+    
+        } else if annotation is ResupplySAnnotation {
+            let reuseId = "ResupplyS"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"resupplyS.png")
+            
+            return view
+            
+        } else if annotation is ResupplyLAnnotation {
+            let reuseId = "ResupplyL"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"resupplyL.png")
+            
+            return view
+            
+        } else if annotation is OutfitterAnnotation {
+            let reuseId = "Outfitter"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"outfitter.png")
+            
+            return view
+            
+        } else if annotation is PostAnnotation {
+            let reuseId = "Post"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"post.png")
+            
+            return view
+            
+        } else if annotation is MedicalAnnotation {
+            let reuseId = "Medical"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"medical")
+            
+            return view
+    
+        } else if annotation is TransportationAnnotation {
+            let reuseId = "Transportation"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"transportation.png")
+            
+            return view
+            
+        } else if annotation is LaundryAnnotation {
+            let reuseId = "Laundry"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            }
+            else {
+                view!.annotation = annotation
+            }
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            view!.image = UIImage(named:"laundry.png")
+            
+            return view
+            
+        } else { // DEFAULT
+            
+            let reuseId = "Default"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            
+            if view == nil {
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+            } else {
+                view!.annotation = annotation
+            }
+            view!.leftCalloutAccessoryView = nil
+            view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
             return view
         }
     }

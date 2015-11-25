@@ -6,6 +6,8 @@
 //  Copyright © 2015 Douglas Labbe. All rights reserved.
 //
 
+// MAP ICON ART FROM https://mapicons.mapsmarker.com
+
 import UIKit
 import Parse
 
