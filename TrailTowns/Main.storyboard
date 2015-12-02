@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QR2-Eb-dPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="2049"/>
+            <point key="canvasLocation" x="2273" y="1577"/>
         </scene>
         <!--Places-->
         <scene sceneID="aDN-ys-tK6">
@@ -476,7 +476,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fm-Wv-Okk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="793"/>
+            <point key="canvasLocation" x="785" y="37"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

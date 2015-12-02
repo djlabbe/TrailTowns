@@ -16,7 +16,8 @@ class PlacesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = darkGray
+        backgroundColor = gray1
+        placeNameLabel.textColor = midGray
         
         placeImage.layer.cornerRadius = 37.5
         placeImage.clipsToBounds = true

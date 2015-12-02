@@ -17,30 +17,20 @@ class TownTableViewCell: UITableViewCell {
     @IBOutlet weak var milesTravelledLabel: UILabel!
     @IBOutlet weak var townAccessLabel: UILabel!
 
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = white
-        townNameLabel.textColor = darkGray
-        townOffsetLabel.textColor = darkGray
-        milesTravelledLabel.textColor = darkGray
-        townAccessLabel.textColor = darkGray
+        townNameLabel.textColor = midGray
+        townOffsetLabel.textColor = midGray
+        milesTravelledLabel.textColor = midGray
+        townAccessLabel.textColor = midGray
         
-    
         townImage.layer.cornerRadius = 37.5
         townImage.clipsToBounds = true
-        
-        
-        //self.townImage.layer.borderWidth = 1.0
-        //self.townImage.layer.borderColor = UIColor.whiteColor().CGColor
-        
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }

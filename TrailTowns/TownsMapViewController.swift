@@ -63,20 +63,26 @@ class TownsMapViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: - Annotations
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("AnnotationView Id")
+        let reuseId = "TownPin"
+        
         if annotation is MKUserLocation {
             return nil
-        } else {
-            if view == nil{
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView Id")
+        }
+        
+        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+        
+        if view == nil{
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                 view!.canShowCallout = true
+                view!.image = UIImage(named:"townPin.png")
+                view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+                view!.leftCalloutAccessoryView = nil
             } else {
                 view!.annotation = annotation
             }
-            view?.leftCalloutAccessoryView = nil
-            view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+        
             return view
-        }
+        
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {

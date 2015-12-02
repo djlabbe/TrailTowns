@@ -39,8 +39,12 @@ class PlaceInfoViewController: UIViewController, CLLocationManagerDelegate  {
         
         title = ""
     
-        view.backgroundColor = darkGray
-        descLabel.backgroundColor = darkGray
+        let bgColor = gray1
+        view.backgroundColor = bgColor
+        descLabel.backgroundColor = bgColor
+        titleLabel.textColor = midGray
+        descLabel.textColor = midGray
+        
         
         addressButton.backgroundColor = lightGreen
         phoneButton.backgroundColor = midGreen
@@ -49,8 +53,9 @@ class PlaceInfoViewController: UIViewController, CLLocationManagerDelegate  {
         
         
         for image in serviceImages {
-            image.backgroundColor = darkGray
+            image.backgroundColor = bgColor
         }
+        
         mapView.mapType = MKMapType.Standard
         mapView.hidden = true
         
@@ -154,7 +159,7 @@ class PlaceInfoViewController: UIViewController, CLLocationManagerDelegate  {
                     var i = 0
                     for availableService in self.availableServices {
                         if i < 8 {
-                            let imgName = "Icons/\(availableService).png"
+                            let imgName = "\(availableService).png"
                             self.serviceImages[i].image = UIImage(named: imgName)
                             
                         }

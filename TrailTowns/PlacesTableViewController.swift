@@ -11,6 +11,9 @@ import Parse
 
 class PlacesTableViewController: UITableViewController {
     
+    var places = [PFObject]()
+    var placeNames = [String]()
+    
     var serviceTypes:[String:String] = ["Lodging":"isLodging", "Camping":"isTent", "Restaurants":"isRestaurant",
         "Short-Term Resupply":"isResupplyS", "Long-Term Resupply": "isResupplyL", "Outfitters":"isOutfitter", "Post Office":"isPost", "Medical":"isMedical", "Transportation":"isTransport", "Shower":"isShower", "Laundry":"isLaundry", "Wifi":"isWifi"]
     
@@ -19,8 +22,7 @@ class PlacesTableViewController: UITableViewController {
     var townLong:String?
     var serviceType:String?
     
-    var places = [PFObject]()
-    var placeNames = [String]()
+    
     var selectedPlaceName:String?
     var selectedPlaceId:String?
 
@@ -28,7 +30,7 @@ class PlacesTableViewController: UITableViewController {
         super.viewDidLoad()
         title = serviceType
         
-        self.tableView.backgroundColor = darkGray
+        self.tableView.backgroundColor = gray1
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
         let nib = UINib(nibName: "PlaceCell", bundle: nil)
@@ -80,7 +82,21 @@ class PlacesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:PlacesTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! PlacesTableViewCell
-
+        
+        switch (indexPath.row % 3) {
+        case 0:
+            cell.backgroundColor = gray1
+            break
+        case 1:
+            cell.backgroundColor = gray2
+            break
+        case 2:
+            cell.backgroundColor = lightGray
+            break
+        default:
+            break
+        }
+        
         cell.placeNameLabel?.text = placeNames[indexPath.row]
         
         if let placeImageFile = places[indexPath.row]["mainImage"] as? PFFile {
@@ -96,7 +112,7 @@ class PlacesTableViewController: UITableViewController {
                 }
             }
         } else {
-            cell.placeImage.image = UIImage(named: "Icons/questionmark.png")
+            cell.placeImage.image = UIImage(named: "questionmark.png")
         }
         
         return cell

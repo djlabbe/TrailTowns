@@ -11,11 +11,7 @@ import Parse
 
 class TownsTableViewController: UITableViewController {
     
-    let green1 = UIColor(red: 252.0/255.0, green: 252.0/255.0, blue: 252.0/255.0, alpha: 1.0)
-    let green2 = UIColor(red: 249.0/255.0, green: 249.0/255.0, blue: 249.0/255.0, alpha: 1.0)
-    let green3 = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0)
-    
-    var stateList = [State(name: "Georgia"), State(name: "North Carolina & Tennessee"), State(name: "Virginia"), State(name: "West Virginia"), State(name: "Maryland"), State(name: "Pennsylvania"), State(name: "New Jersey"), State(name: "New York"), State(name: "Connecticut"), State(name: "Massachusettes"), State(name: "Vermont"), State(name: "New Hampshire"), State(name: "Maine")]
+   var stateList = [State(name: "Georgia"), State(name: "North Carolina & Tennessee"), State(name: "Virginia"), State(name: "West Virginia"), State(name: "Maryland"), State(name: "Pennsylvania"), State(name: "New Jersey"), State(name: "New York"), State(name: "Connecticut"), State(name: "Massachusettes"), State(name: "Vermont"), State(name: "New Hampshire"), State(name: "Maine")]
     
     var towns = [PFObject]();
     var selectedTownId:String?
@@ -25,7 +21,7 @@ class TownsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = white
+        tableView.backgroundColor = gray1
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
         let nib = UINib(nibName: "TownCell", bundle: nil)
@@ -116,21 +112,18 @@ class TownsTableViewController: UITableViewController {
         
         switch (indexPath.row % 3) {
         case 0:
-            cell.backgroundColor = green1
+            cell.backgroundColor = gray1
             break
         case 1:
-            cell.backgroundColor = green2
+            cell.backgroundColor = gray2
             break
         case 2:
-            cell.backgroundColor = green3
+            cell.backgroundColor = lightGray
             break
         default:
             break
         }
         
-        
-        
-//        cell.backgroundColor = UIColor(red: (255.0-CGFloat(indexPath.row)*3)/255.0, green: (255.0-CGFloat(indexPath.row)*2)/255.0, blue: (255.0-CGFloat(indexPath.row)*3)/255.0, alpha: 1.0)
         
         if let townName = stateList[indexPath.section].townsInState[indexPath.row]["name"] as? String {
             if let offSet = stateList[indexPath.section].townsInState[indexPath.row]["offset"] as? String {
@@ -160,6 +153,10 @@ class TownsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100.0
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let indexPath = tableView.indexPathForSelectedRow
@@ -177,14 +174,12 @@ class TownsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = lightGray
-        header.textLabel!.textColor = darkGray
+        header.contentView.backgroundColor = midGray
+        header.textLabel!.textColor = lightGray
         header.alpha = 0.8
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100.0
-    }
+   
     
     // MARK: - Navigation
     

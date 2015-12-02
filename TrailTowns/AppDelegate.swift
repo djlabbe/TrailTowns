@@ -14,7 +14,11 @@ import CoreData
 let white = UIColor.whiteColor()
 let black = UIColor.blackColor()
 
+let gray1 = UIColor(red: 250.0/255.0, green: 250.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+let gray2 = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0)
+
 let lightGray = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+let midGray = UIColor(red: 90.0/255.0, green: 90.0/255.0, blue: 90.0/255.0, alpha: 1.0)
 let darkGray = UIColor(red: 25.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1.0)
 
 let darkGreen = UIColor(red: 25.0 / 255.0, green: 75.0/255.0, blue: 5.0/255.0, alpha: 1.0)
@@ -29,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 190.0/255.0, green: 190.0/255.0, blue: 190.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = white
         UIBarButtonItem.appearance().tintColor = white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : white]

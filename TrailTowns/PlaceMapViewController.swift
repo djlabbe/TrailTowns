@@ -46,23 +46,26 @@ class PlaceMapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("AnnotationView Id")
+        let reuseId = "Places"
+        
         if annotation is MKUserLocation {
             return nil
-        } else {
-            if view == nil{
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView Id")
-                view!.canShowCallout = true
-            } else {
-                view!.annotation = annotation
-            }
+        }
+        
+        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+        
+        if view == nil{
+            view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            view!.canShowCallout = true
+            view!.image = UIImage(named:"placePin.png")
             view?.leftCalloutAccessoryView = nil
             view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            
-            return view
+        } else {
+            view!.annotation = annotation
         }
+        
+        return view
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {

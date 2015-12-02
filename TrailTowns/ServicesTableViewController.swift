@@ -25,7 +25,7 @@ class ServicesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "\(self.townName!)"
-        self.tableView.backgroundColor = darkGray
+        self.tableView.backgroundColor = gray1
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
         let nib = UINib(nibName: "ServiceCell", bundle: nil)
@@ -84,10 +84,24 @@ class ServicesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:ServiceTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! ServiceTableViewCell
-
+        
+        switch (indexPath.row % 3) {
+        case 0:
+            cell.backgroundColor = gray1
+            break
+        case 1:
+            cell.backgroundColor = gray2
+            break
+        case 2:
+            cell.backgroundColor = lightGray
+            break
+        default:
+            break
+        }
+            
         let serviceName = serviceList[indexPath.row]
         cell.nameLabel?.text = serviceName
-        cell.imageView!.image =  UIImage(named: "Icons/\(serviceName).png")
+        cell.imageView!.image =  UIImage(named: "\(serviceName).png")
         
         return cell
     }
@@ -103,7 +117,7 @@ class ServicesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 75.0
+        return 100.0
     }
     
     

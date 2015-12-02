@@ -110,7 +110,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"lodging.png")
+            view!.image = UIImage(named:"lodgingMap.png")
             
             return view
         
@@ -127,7 +127,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             }
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"camping.png")
+            view!.image = UIImage(named:"campingMap.png")
             
             return view
             
@@ -145,7 +145,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"restaurant.png")
+            view!.image = UIImage(named:"restaurantMap.png")
             
             return view
     
@@ -163,7 +163,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"resupplyS.png")
+            view!.image = UIImage(named:"resupplySMap.png")
             
             return view
             
@@ -181,7 +181,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"resupplyL.png")
+            view!.image = UIImage(named:"resupplyLMap.png")
             
             return view
             
@@ -199,7 +199,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"outfitter.png")
+            view!.image = UIImage(named:"outfitterMap.png")
             
             return view
             
@@ -216,7 +216,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             }
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"post.png")
+            view!.image = UIImage(named:"postMap.png")
             
             return view
             
@@ -233,7 +233,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             }
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"medical")
+            view!.image = UIImage(named:"medicalMap")
             
             return view
     
@@ -250,7 +250,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             }
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"transportation.png")
+            view!.image = UIImage(named:"transportationMap.png")
             
             return view
             
@@ -267,7 +267,7 @@ class ServicesMapViewController: UIViewController, CLLocationManagerDelegate {
             }
             view!.leftCalloutAccessoryView = nil
             view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            view!.image = UIImage(named:"laundry.png")
+            view!.image = UIImage(named:"laundryMap.png")
             
             return view
             

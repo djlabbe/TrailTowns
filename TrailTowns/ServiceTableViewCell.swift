@@ -17,9 +17,8 @@ class ServiceTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = darkGray
-        iconImage.backgroundColor = darkGray
-        nameLabel.textColor = white
+        backgroundColor = gray1
+        nameLabel.textColor = midGray
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
